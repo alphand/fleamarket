@@ -1,1 +1,1 @@
-web: appcmd
+web: ./appcmd
