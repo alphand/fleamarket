@@ -2,6 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var pathToBourbon = require('node-bourbon').includePaths
 
 var env = process.env.NODE_ENV
 // check env & config/index.js to decide weither to enable CSS Sourcemaps for the
@@ -79,6 +80,9 @@ module.exports = {
         }
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [pathToBourbon]
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')

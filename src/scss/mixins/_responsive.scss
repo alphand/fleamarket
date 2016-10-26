@@ -1,0 +1,30 @@
+$bp-smartphones: "only screen and (min-device-width : 320px) and (max-device-width : 480px)";
+$bp-tablets: "only screen and (min-device-width : 768px) and (max-device-width : 1024px)";
+$bp-medium: "only screen  and (min-width : 1224px)";
+$bp-large: "only screen  and (min-width : 1824px)";
+
+@mixin respond-to($media) {
+  @if $media == smartphones {
+    @media #{$bp-smartphones} {
+      @content;
+    }
+  }
+
+  @if $media == tablets {
+    @media #{$bp-tablets} {
+      @content;
+    }
+  }
+
+  @if $media == medium {
+    @media #{$bp-medium} {
+      @content;
+    }
+  }
+
+  @if $media == large {
+    @media #{$bp-large} {
+      @content;
+    }
+  }
+}
