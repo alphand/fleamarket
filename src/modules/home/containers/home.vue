@@ -1,5 +1,6 @@
 <template>
   <BaseLayout>
+    <TopBar slot="header" />
     <div class="homeholder">
       <img src="../../../assets/logo.png">
       <p>
@@ -13,11 +14,13 @@
 <script>
   import BaseLayout from '../../../layouts/baseLayout';
   import Hello from '../../../components/Hello';
+  import TopBar from '../../../components/TopBar';
 
   export default {
     components: {
       BaseLayout,
       Hello,
+      TopBar,
     },
   };
 
