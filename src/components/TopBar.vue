@@ -1,6 +1,12 @@
 <template>
-  <div class="topbar-container">
-    <h2 class="brand">Fleamarket Title</h2>
+  <div class="tb-container">
+    <div class="tb-c-inner">
+      <a class="tb-brand" href="/">Fleamarket Title</a>
+
+      <div class="actions">
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,11 +15,16 @@
   @import '~susy/sass/susy';
   @import '../scss/mixins/_responsive.scss';
 
-  .topbar-container {
-    @include container(80em);
+  .tb-container {
+    @include layout(auto 12 (60px 20px) split static);
+  }
 
-    .brand {
-      font-size: em(18px);
-    }
+  .tb-c-inner {
+  }
+
+  .tb-brand {
+    padding: 0;
+    margin: 0;
+    font-size: em(18px);
   }
 </style>
