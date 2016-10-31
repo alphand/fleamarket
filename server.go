@@ -9,5 +9,6 @@ func main() {
 	port := os.Getenv("PORT")
 
 	http.Handle("/", http.FileServer(http.Dir("./dist")))
+	http.Handle("/static", http.FileServer(http.Dir("./static")))
 	http.ListenAndServe(":"+port, nil)
 }
