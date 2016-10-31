@@ -10,5 +10,5 @@ fi
 
 git checkout -b dist
 git add -Af ./dist
-git commit -m "pushing dist as $CI_NAME - $CI_BUILD_NUMBER"
+git commit -m "pushing dist as $CI_NAME - $CI_BUILD_NUMBER: $CI_MESSAGE"
 git push -u origin dist
