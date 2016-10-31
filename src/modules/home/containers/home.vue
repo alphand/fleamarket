@@ -5,16 +5,19 @@
       <p>
         Something to be used
       </p>
+      <Hello />
     </div>
   </BaseLayout>
 </template>
 
 <script>
   import BaseLayout from '../../../layouts/baseLayout';
+  import Hello from '../../../components/Hello';
 
   export default {
     components: {
       BaseLayout,
+      Hello,
     },
   };
 
