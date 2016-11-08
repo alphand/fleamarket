@@ -1,30 +1,29 @@
 <template>
-  <div class="tb-container">
-    <div class="tb-c-inner">
-      <a class="tb-brand" href="/">Fleamarket Title</a>
+  <div class="topbar navbar navbar-full navbar-dark bg-fmp-ptrn1">
+    <a href="#" class="navbar-brand">Fleamarket</a>
 
-      <div class="actions">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a href="#" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Features</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">About Us</a>
+      </li>
+    </ul>
 
-      </div>
+    <div class="float-xs-right">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-fmp-ptrn3">Register</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-fmp-ptrn3">Login</a>
+        </li>
+      </ul>
     </div>
+
   </div>
 </template>
-
-<style lang="scss">
-  @import 'bourbon';
-  @import '~susy/sass/susy';
-  @import '../scss/mixins/_responsive.scss';
-
-  .tb-container {
-    @include layout(auto 12 (60px 20px) split static);
-  }
-
-  .tb-c-inner {
-  }
-
-  .tb-brand {
-    padding: 0;
-    margin: 0;
-    font-size: em(18px);
-  }
-</style>

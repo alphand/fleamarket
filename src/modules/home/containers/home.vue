@@ -28,7 +28,6 @@
 
 <style lang="scss">
   @import 'bourbon';
-  @import '~susy/sass/susy';
   @import '../../../scss/mixins/_responsive.scss';
 
   .homeholder {

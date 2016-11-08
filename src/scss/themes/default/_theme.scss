@@ -1,0 +1,11 @@
+@import './_variables.scss';
+@import '../../../../node_modules/bootstrap/scss/mixins/text-emphasis.scss';
+@import '../../../../node_modules/bootstrap/scss/mixins/background-variant.scss';
+
+/* fmp - fleamarket pattern */
+@each $key, $color in $colorptrns {
+  @include text-emphasis-variant('.text-fmp-#{$key}', $color);
+  @include bg-variant('.bg-fmp-#{$key}', $color);
+
+}
+

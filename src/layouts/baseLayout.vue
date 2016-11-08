@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="main-app">
     <slot name="header"></slot>
     <slot></slot>
     </slot name="footer"></slot>
@@ -8,12 +8,7 @@
 
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-  html, body {
-    padding: 0;
-    margin: 0;
-
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  }
+  @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+  @import '../scss/themes/default/theme.scss'
 
 </style>
