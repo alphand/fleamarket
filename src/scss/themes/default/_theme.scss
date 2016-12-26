@@ -6,6 +6,5 @@
 @each $key, $color in $colorptrns {
   @include text-emphasis-variant('.text-fmp-#{$key}', $color);
   @include bg-variant('.bg-fmp-#{$key}', $color);
-
 }
 
