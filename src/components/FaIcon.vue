@@ -15,5 +15,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../scss/font-awesome/font-awesome.scss";
+  @import "../../scss/font-awesome/index.scss";
 </style>

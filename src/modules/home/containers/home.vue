@@ -28,7 +28,7 @@
 
 <style lang="scss">
   @import 'bourbon';
-  @import '../../../scss/mixins/_responsive.scss';
+  @import '../../../../scss/mixins/_responsive.scss';
 
   .homeholder {
       text-align: center;
