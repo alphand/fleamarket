@@ -1,10 +1,13 @@
-
+// pallete from http://www.colourlovers.com/palette/4409436/222221
 $colorptrns: (
-  ptrn1: #0A0908,
-  ptrn2: #22333B,
-  ptrn3: #EAE0D5,
-  ptrn4: #C6AC8F,
-  ptrn5: #5E503F
+  ptrn1: #EEDAD3,
+  ptrn2: #6796AA,
+  ptrn3: #9AC4D7,
+  ptrn4: #CEB9B0,
+  ptrn5: #FAF5F3
 );
+
+$bg-color: map-get($colorptrns, ptrn5);
+$font-color: map-get($colorptrns, ptrn4);
 
 

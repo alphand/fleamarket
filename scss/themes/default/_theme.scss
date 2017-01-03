@@ -8,3 +8,13 @@
   @include bg-variant('.bg-fmp-#{$key}', $color);
 }
 
+html, body {
+  background-color: $bg-color;
+  color: $font-color;
+}
+
+.separator {
+  border-top: 1px solid #D8D8D8;
+  margin-top: 10px;
+  padding-top: 10px;
+}
