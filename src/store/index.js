@@ -2,16 +2,18 @@ import 'es6-promise/auto';
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import * as actions from './actions';
-import * as getters from './getters';
+import user from './modules/user';
+import loader from './modules/loader';
 
 Vue.use(Vuex);
 
 const debug = process.env.NODE_ENV !== 'production';
 
 const store = new Vuex.Store({
-  actions,
-  getters,
+  modules: {
+    user,
+    loader,
+  },
   strict: debug,
   // plugins: debug?
 });
@@ -19,12 +21,11 @@ const store = new Vuex.Store({
 if (module.hot) {
   /* eslint-disable global-require */
   module.hot.accept([
-    './getters',
-    './actions',
+    './modules/user',
   ], () => {
     store.hotUpdate({
-      getters: require('./getters'),
-      actions: require('./actions'),
+      user: require('./modules/user'),
+      loader: require('./modules/loader'),
     });
   });
   /* eslint-enable */
