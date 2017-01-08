@@ -1,6 +1,6 @@
 <template>
-  <div class="topbar navbar navbar-full navbar-dark bg-fmp-ptrn1">
-    <a href="#" class="navbar-brand">Fleamarket</a>
+  <div class="topbar navbar navbar-full navbar-dark bg-inverse">
+    <a href="#" class="navbar-brand">Commerzine</a>
 
     <ul class="nav navbar-nav">
       <li class="nav-item">
@@ -17,19 +17,21 @@
     <div class="float-xs-right">
       <ul class="nav navbar-nav" ref="dropdown">
         <li class="nav-item" v-if="!isAuthenticated">
-          <a href="#" v-on:click="register" class="nav-link text-fmp-ptrn3">Register</a>
+          <a href="#" v-on:click.prevent="register" class="nav-link">Register</a>
         </li>
         <li class="nav-item" v-if="!isAuthenticated">
-          <a href="#" v-on:click="login" class="nav-link text-fmp-ptrn3">Login</a>
+          <a href="#" v-on:click.prevent="login" class="nav-link">Login</a>
         </li>
         <li class="nav-item" v-if="isAuthenticated">
           <div class="dropdown">
-            <div class="nav-link user-profile text-fmp-ptrn3 dropdown-toggle" data-toggle="dropdown">
+            <a href="#" v-on:click.prevent class="nav-link user-profile dropdown-toggle" data-toggle="dropdown">
               <img :src="userProfile.picture" :alt="userProfile.name" />
               {{ userProfile.name }}
-            </div>
-            <div class="dropdown-menu">
-                <a v-on:click.prevent="userLogout" class="dropdown-item">Logout</a>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" v-on:click.prevent="userLogout" class="dropdown-item">Logout</a>
             </div>
           </div>
         </li>
@@ -64,7 +66,8 @@ export default {
         if (err) return;
         profile.idToken = authRes.idToken; // eslint-disable-line
         self.userLogin(profile);
-        this.setLoader(false);
+        self.setLoader(false);
+        self.$router.push('dashboard');
       });
     });
   },
@@ -95,9 +98,11 @@ export default {
 
 <style scoped lang="scss">
   .user-profile img {
-    width: 29px;
-    height: 29px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: -45px;
   }
 </style>

@@ -29,6 +29,8 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
+      'bower': path.resolve(__dirname, '../bower_components'),
+      'scss': path.resolve(__dirname, '../scss'),
     }
   },
   resolveLoader: {
@@ -98,8 +100,9 @@ module.exports = {
   },
   plugins: [
      new webpack.ProvidePlugin({
-      'jQuery': 'jquery/src/jquery',
-      '$': 'jquery/src/jquery',
+      'jquery': 'jquery/src/jquery',
+      'jQuery': 'jquery',
+      '$': 'jquery',
       'window.jQuery': 'jquery',
       'window.Tether': 'tether',
     })

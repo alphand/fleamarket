@@ -1,0 +1,11 @@
+@mixin fl-badge {
+  text-align: center;
+  font-size: 10px;
+  border-radius: 7.5px;
+  min-width: 15px;
+  height: 15px;
+  line-height: 15px;
+  padding: 0 4px;
+  background-color: #fff;
+  color: #1c1c1c;
+}

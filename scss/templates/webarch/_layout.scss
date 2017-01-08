@@ -1,0 +1,35 @@
+@import '../../../node_modules/bootstrap/scss/mixins/grid';
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: $sidebar-color;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: normal;
+    height: 100%;
+}
+
+.page-container {
+    transition: transform 0.3s ease, left  0.3s ease, right  0.3s ease;
+    @include make-container();
+}
+
+.page-content {
+  margin-top: 0px;
+  padding: 0px;
+  background-color: $page-content-color;
+  overflow: auto;
+  position: relative;
+  min-height: 100%;
+  transition: transform 0.3s ease;
+  z-index: 6;
+}

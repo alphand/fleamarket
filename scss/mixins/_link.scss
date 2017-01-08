@@ -1,0 +1,11 @@
+@mixin link-effect-shade() {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: auto;
+  height: 0%;
+}
+

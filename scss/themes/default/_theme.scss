@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher:400,700%7cCantarell:400,400italic,700,700italic');
+
 @import './_variables.scss';
-@import '../../../node_modules/bootstrap/scss/mixins/text-emphasis.scss';
-@import '../../../node_modules/bootstrap/scss/mixins/background-variant.scss';
+
+@import '../../templates/bootstrap/fl-bootstrap.scss';
+@import '../../templates/khaki/main';
+
+@import '../../../node_modules/bootstrap/scss/mixins/hover';
+@import '../../../node_modules/bootstrap/scss/mixins/text-emphasis';
+@import "../../../node_modules/bootstrap/scss/mixins/background-variant";
 
 /* fmp - fleamarket pattern */
 @each $key, $color in $colorptrns {
@@ -8,13 +15,18 @@
   @include bg-variant('.bg-fmp-#{$key}', $color);
 }
 
-html, body {
-  background-color: $bg-color;
-  color: $font-color;
+html {
+  font-size: 15px;
 }
 
-.separator {
-  border-top: 1px solid #D8D8D8;
-  margin-top: 10px;
-  padding-top: 10px;
+body {
+  font-family: Cantarell, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Philosopher, sans-serif;
+  font-weight: 700;
 }

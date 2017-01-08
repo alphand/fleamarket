@@ -32,7 +32,5 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-  @import '../../node_modules/bootstrap/scss/bootstrap.scss';
   @import '../../scss/themes/default/theme.scss';
 </style>
